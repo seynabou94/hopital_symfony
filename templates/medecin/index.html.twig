@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MedecinController!{% endblock %}
+{% block contente %}
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>service</th>
+              <th>maricul</th>
+               <th>prenoms</th>
+                <th>nom</th>
+                 <th>tel</th>
+                  <th>date_naissance</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for medecin in medcin %}
+        
+   
+        <tr>
+            
+        
+            <td>{{ (medecin.service.id)}}</td>
+               <td>{{medecin.matricule}}</td>
+                  <td>{{medecin.prenom}}</td>
+                     <td>{{medecin.nom}}</td>
+                        <td>{{medecin.tel}}</td>
+                           {# <td>{{medecin.date_naissance}}</td> #}
+            <td></td>
+            <td></td>
+            {# <td><a href="{{ path('nom fonction',{'id':service.id}) }}">suppremer</a> #}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

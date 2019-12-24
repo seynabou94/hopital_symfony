@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block contente %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Libelle</th>
+              <th>modification</th>
+               <th>suppression</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for service in services %}
+        
+   
+        <tr>
+            <td scope="row">{{service.id}}</td>
+            <td>{{service.libelle}}
+            </td>
+            <td></td>
+            <td></td>
+            {# <td><a href="{{ path('nom fonction',{'id':service.id}) }}">suppremer</a> #}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
